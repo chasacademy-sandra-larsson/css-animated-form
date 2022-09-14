@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+:root {
+  --mineShaft: #333333;
+  --tundora: #4a4a4a;
+  --dustyGray: #9b9b9b;
+  --gallery: #f0f0f0;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--mineShaft);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  height: 70vh;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem 3rem;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;;
+}
+
+
+.login h2 {
+  margin: 0 0 50px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 40px;
+
+}
+
+label .label-text {
+  color: var(--dustyGray);
+  cursor: text;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transform: translateY(-25px);
+  transition: all 0.3s;
+}
+
+label input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid var(--tundora);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  transition: all 0.3s;
+  width: 300px;
+}
+
+
+label input:focus+.label-text {
+  color: var(--gallery);
+  font-size: 13px;
+  transform: translateY(-60px);
+}
+
+label input:valid+.label-text {
+  font-size: 13px;
+  transform: translateY(-60px);
+}
+
+/* Styling för alla knappar */
+
+button {
+  padding: 15px 30px;
+  color: blueviolet;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+button {
+  position: relative;
+}
+
+button::after {
+  content: "";
+  background-color: blueviolet;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  animation: btn-1 2s linear infinite;
+}
+
+@keyframes btn-1 {
+  0% {
+    opacity: 1;
+    width: 0%;
+  }
+
+  25% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  50% {
+
+    opacity: 0;
+    width: 100%;
+  }
+
+  75% {
+    opacity: 0;
+    width: 100%;
+
+  }
+
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+
+}
+
+
+.btn-span::after {
+  content: "";
+  background-color: blueviolet;
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  top: 0;
+  right: 0;
+  animation: btn-2 2s linear infinite;
+
+}
+
+@keyframes btn-2 {
+  0% {
+    opacity: 0;
+    height: 0%;
+  }
+
+  25% {
+    opacity: 1;
+    height: 0%;
+  }
+
+  50% {
+
+    opacity: 1;
+    height: 100%;
+  }
+
+  75% {
+    opacity: 0;
+    height: 100%;
+
+  }
+
+  100% {
+    opacity: 0;
+    height: 100%;
+  }
+
+}
+
+
+button::before {
+  content: "";
+  background-color: blueviolet;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  animation: btn-3 2s linear infinite;
+
+}
+
+
+@keyframes btn-3 {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  25% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  50% {
+
+    opacity: 1;
+    width: 0%;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+
+  }
+
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+
+}
+
+.btn-span::before {
+  content: "";
+  background-color: blueviolet;
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  bottom: 0;
+  left: 0;
+  animation: btn-4 2s linear infinite;
+
+}
+
+@keyframes btn-4 {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+
+    opacity: 0;
+    height: 0%;
+  }
+
+  75% {
+    opacity: 1;
+    height: 0%;
+
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+
+}
+
+.login button:hover {
+  background: blueviolet;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px blueviolet,
+              0 0 25px blueviolet,
+              0 0 50px blueviolet,
+              0 0 100px blueviolet;
+}
+
+/* 
+button:hover::after {
+  width: 100%;
+}
+button:hover > .btn-span::after {
+  transition-delay: 0.3s;
+  height: 100%;
+}
+button:hover::before {
+  transition-delay: 0.6s;
+  width: 100%;
+}
+button:hover > .btn-span::before {
+  transition-delay: 0.9s;
+  height: 100%;
+} */
