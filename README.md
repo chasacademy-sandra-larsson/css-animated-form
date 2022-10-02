@@ -4,7 +4,7 @@
 
 2. Style formuläret efter önskemål
 
-3. Använd CSS animation för att ge feedback till användaren vid inmatning i en input-ruta eller "musen över" en knapp. 
+3. Använd CSS animation för att ge feedback till användaren vid inmatning i en input-ruta och/eller "musen över" en knapp. 
 
 4. Ta inspiration nedan eller exempelvis på https://codepen.io/ 
 
